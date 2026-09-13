@@ -14,7 +14,7 @@ import MovingGallery from "../components/MovingGallery";
 import "../styles/Bookingcss.css";
 import { services } from "../data/Services";
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxcnlSKX2ZSQ-8mcIwWyKvTyhxf20qtwqxokpMFu8kQRtvGUB_nLB37x7_pH098Fts/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxIohCAUSM6zXh8IdBNQsUCnhUV7fQL6NiD3IcmaJ-USudtO9YheXpy2iVWZxxd5fsk/exec";
 
 function BookAppointment() {
 
