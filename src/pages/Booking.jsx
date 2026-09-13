@@ -202,7 +202,7 @@ Please contact the customer to confirm the appointment.
 
     window.open(
 
-        `https://wa.me/918075336873?text=${encodeURIComponent(message)}`,
+        `https://wa.me/919946935725?text=${encodeURIComponent(message)}`,
 
         "_blank"
     );
