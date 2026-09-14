@@ -112,7 +112,7 @@ const ServicesSection = ({ services }) => {
                                                 to={`/book-appointment/${service.id}`}
                                                 className="service-btn"
                                             >
-                                                VIEW DETAILS
+                                                Book Appointment
                                             </Link>
 
                                         </div>
