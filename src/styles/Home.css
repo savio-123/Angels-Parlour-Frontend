@@ -242,7 +242,7 @@
 
     font-weight: 300;
 
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 
@@ -252,7 +252,7 @@
 
     line-height: 1.7;
 
-    margin-bottom: 26px;
+    margin-bottom: 15px;
 
     max-width: 90%;
 }
@@ -612,7 +612,7 @@
 
         line-height: 1.6;
 
-        margin-bottom: 18px;
+        margin-bottom: 10px;
     }
 
     .service-btn {
@@ -707,7 +707,7 @@
 
         font-size: 1.7rem;
 
-        margin-bottom: 8px;
+        margin-bottom: 4px;
     }
 
     .service-overlay p {
@@ -716,7 +716,7 @@
 
         line-height: 1.6;
 
-        margin-bottom: 18px;
+        margin-bottom: 8px;
     }
 
     .service-btn {
