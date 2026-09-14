@@ -495,7 +495,7 @@ function Contact() {
 
                         <span>Mon–Fri</span>
 
-                        <span>9:00 AM – 8:00 PM</span>
+                        <span>9:30 AM – 7:00 PM</span>
 
                     </div>
 
