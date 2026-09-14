@@ -100,12 +100,8 @@ const ServicesSection = ({ services }) => {
                                         <div className="service-overlay">
 
                                             <h3>{service.name}</h3>
-                                            {/* truncated description */}
                                             <p>
-                                                {service.description.length > 100
-                                                    ? service.description.substring(0, 150) + "..."
-                                                    : service.description
-                                                }
+                                                {service.price}
                                             </p>
 
                                             <Link

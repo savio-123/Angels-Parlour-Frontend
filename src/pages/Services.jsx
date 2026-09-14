@@ -247,13 +247,6 @@ const Services = () => {
                                         {service.name}
 
                                     </h3>
-                                    <p>
-                                                {service.description.length > 100
-                                                    ? service.description.substring(0, 50) + "..."
-                                                    : service.description
-                                                }
-                                            </p>
-
 
                                     <div className="lux-card-bottom">
 
