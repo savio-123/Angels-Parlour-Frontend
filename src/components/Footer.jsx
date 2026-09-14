@@ -134,7 +134,7 @@ function Footer() {
 
                                 <FaPhoneAlt />
 
-                                +91 9526 999 111
+                                +91 9946935725
 
                             </a>
 
@@ -142,7 +142,7 @@ function Footer() {
 
                                 <FaEnvelope />
 
-                                info@gmail.com
+                                angelsbeautyparlourspa@gmail.com
 
                             </a>
 

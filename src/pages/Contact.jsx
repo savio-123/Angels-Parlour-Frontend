@@ -41,13 +41,6 @@ const faqData = [
             "Selected services are available at home upon request."
     },
 
-    {
-        question:
-            "What is your cancellation policy?",
-
-        answer:
-            "Please notify us at least 24 hours before your appointment."
-    }
 ]
 
 function Contact() {
@@ -436,7 +429,7 @@ function Contact() {
 
                     <h2>
 
-                        Angel's Beauty
+                        Angel's Beauty Parlour
 
                     </h2>
 
@@ -483,7 +476,7 @@ function Contact() {
                             <h5>Email Us</h5>
 
                             <p>
-                                Angels333@gmail.com
+                                angelsbeautyparlourspa@gmail.com
                             </p>
 
                         </div>
