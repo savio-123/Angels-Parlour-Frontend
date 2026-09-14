@@ -101,7 +101,7 @@ const ServicesSection = ({ services }) => {
 
                                             <h3>{service.name}</h3>
                                             <p>
-                                                {service.price}
+                                               ₹{service.price}
                                             </p>
 
                                             <Link

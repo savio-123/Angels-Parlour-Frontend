@@ -348,9 +348,11 @@ body {
 
     flex-direction: column;
 
-    justify-content: space-between;
+    justify-content: flex-start;
 
-    min-height: 320px;
+    min-height: 260px;
+
+    box-sizing: border-box;
 }
 
 
@@ -365,18 +367,8 @@ body {
     font-family:
         'Cormorant Garamond',
         serif;
-}
 
-
-.lux-card-content p {
-
-    color: #7d746b;
-
-    line-height: 1.8;
-
-    margin-bottom: 28px;
-
-    flex-grow: 1;
+    margin: 0 0 28px 0;
 }
 
 
@@ -392,7 +384,7 @@ body {
 
     align-items: center;
 
-    margin-bottom: 28px;
+    margin-bottom: 24px;
 }
 
 

@@ -210,6 +210,10 @@
 
 .service-overlay {
 
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
     position: absolute;
 
     inset: 0;
