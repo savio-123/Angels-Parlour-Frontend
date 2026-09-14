@@ -260,7 +260,7 @@
 
 .service-btn {
 
-    font-size: 2rem;
+    font-size: 1.7rem;
 
     width: fit-content;
 
@@ -712,7 +712,11 @@
 
     .service-overlay p {
 
-        display: none;
+        font-size: 0.95rem;
+
+        line-height: 1.6;
+
+        margin-bottom: 18px;
     }
 
     .service-btn {
