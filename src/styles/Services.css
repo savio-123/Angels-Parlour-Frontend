@@ -342,7 +342,7 @@ body {
 
 .lux-card-content {
 
-    padding: 5px;
+    padding: 28px;
 
     display: flex;
 
@@ -360,13 +360,25 @@ body {
 
     font-weight: 300;
 
-    margin-bottom: 4px;
+    margin-bottom: 15px;
 
     color: #1e1b18;
 
     font-family:
         'Cormorant Garamond',
         serif;
+}
+
+
+.lux-card-content p {
+
+    color: #7d746b;
+
+    line-height: 1.8;
+
+    margin-bottom: 28px;
+
+    flex-grow: 1;
 }
 
 
