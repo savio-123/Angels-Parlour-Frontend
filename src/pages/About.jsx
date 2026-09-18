@@ -50,30 +50,13 @@ const About = () => {
 
 
     const artists = [
-
         {
-            image: "/artists/team-ananya.png",
-            name: "Priya Sharma",
+            image: "/artists/shanty-bose.webp",
+            name: "Shanty Bose",
             role: "LEAD STYLIST",
             quote:
                 "Beauty begins with confidence."
         },
-
-        {
-            image: "/artists/team-deepa.png",
-            name: "Ananya Kapoor",
-            role: "BRIDAL SPECIALIST",
-            quote:
-                "Every bride deserves to feel like royalty."
-        },
-
-        {
-            image: "/artists/team-priya.png",
-            name: "Deepa Nair",
-            role: "SKIN CARE EXPERT",
-            quote:
-                "Healthy skin is timeless beauty."
-        }
     ];
 
     const [journeyRef, journeyVisible] =
@@ -465,7 +448,7 @@ const About = () => {
                             Meet the
                             <span>
 
-                                {" "}Artists
+                                {" "}Artist
 
                             </span>
 
@@ -473,7 +456,7 @@ const About = () => {
 
                         <p>
 
-                            The passionate experts
+                            The passionate expert
                             behind your flawless looks.
 
                         </p>
@@ -482,80 +465,29 @@ const About = () => {
 
 
                     <div className="artists-grid">
+                        <div
+                            className={`
+                                artist-card
+                                ${artistsVisible ? "artist-visible" : ""}
+                            `}
+                        >
+                            <div className="artist-image-wrapper">
+                                <img
+                                    src="/artists/shanty-bose.webp"
+                                    alt="Shanty Bose"
+                                />
 
-                        {
-                            artists.map(
-                                (
-                                    artist,
-                                    index
-                                ) => (
+                                <div className="artist-overlay">
+                                    <p>
+                                        "Beauty begins with confidence."
+                                    </p>
+                                </div>
+                            </div>
 
-                                    <div
+                            <h3>Shanty Bose</h3>
 
-                                        className={`
-                                            artist-card
-
-                                            ${
-                                                artistsVisible
-                                                    ? "artist-visible"
-                                                    : ""
-                                            }
-                                        `}
-
-                                        style={{
-                                            transitionDelay:
-                                                `${index * 0.15}s`
-                                        }}
-
-                                        key={index}
-                                    >
-
-                                        <div
-                                            className="
-                                                artist-image-wrapper
-                                            "
-                                        >
-
-                                            <img
-                                                src={artist.image}
-                                                alt=""
-                                            />
-
-                                            <div
-                                                className="
-                                                    artist-overlay
-                                                "
-                                            >
-
-                                                <p>
-
-                                                    "
-                                                    {artist.quote}
-                                                    "
-
-                                                </p>
-
-                                            </div>
-
-                                        </div>
-
-                                        <h3>
-
-                                            {artist.name}
-
-                                        </h3>
-
-                                        <span>
-
-                                            {artist.role}
-
-                                        </span>
-
-                                    </div>
-                                )
-                            )
-                        }
-
+                            <span>LEAD STYLIST</span>
+                        </div>
                     </div>
 
                 </div>

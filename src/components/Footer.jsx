@@ -80,6 +80,7 @@ function Footer() {
                         <div className="footer-links">
 
                             <span>
+
                                 Hair Styling
                             </span>
 
@@ -126,7 +127,7 @@ function Footer() {
                             <p>
 
                                 Mon - Sun :
-                                9:00 am - 8:00 pm
+                                9:30 am - 7:00 pm
 
                             </p>
 
