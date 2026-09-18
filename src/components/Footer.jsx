@@ -139,7 +139,7 @@ function Footer() {
 
                             </a>
 
-                            <a href="mailto:info@gmail.com">
+                            <a href="mailto:angelsbeautyparlourspa@gmail.com">
 
                                 <FaEnvelope />
 
