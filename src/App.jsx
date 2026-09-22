@@ -2,17 +2,20 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
+
 // Pages
 import Home from "./pages/Home";
 import BookAppointment from "./pages/Booking";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
 
   return (
     <BrowserRouter>
+     <ScrollToTop />
      <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />} />

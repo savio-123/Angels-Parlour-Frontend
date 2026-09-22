@@ -646,7 +646,7 @@ const serviceCategories = [
             {
                 id: 96,
                 name: "Hair Dye - Henna - Colouring",
-                price: 1200,
+                price: "Variable Price",
                 image: "/services/photo-1580618672591-eb180b1a973f.avif"
             }
         ]
