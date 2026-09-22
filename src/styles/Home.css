@@ -205,13 +205,8 @@
 ========================================= */
 
 .service-overlay {
-
-    font-family:
-        'Cormorant Garamond',
-        serif;
-
+    font-family: 'Cormorant Garamond', serif;
     position: absolute;
-
     inset: 0;
 
     background:
@@ -221,9 +216,11 @@
             rgba(0, 0, 0, 0.08)
         );
 
-    justify-content: center;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;        
 
-    align-items: center;
+    padding-bottom: 24px;
 
     color: white;
 }
