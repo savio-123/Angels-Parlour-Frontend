@@ -12,7 +12,7 @@ import Footer from "../components/Footer";
 import MovingGallery from "../components/MovingGallery";
 
 import "../styles/Bookingcss.css";
-import { services } from "../data/Services";
+import { services, serviceCategories } from "../data/Services";
 
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxIohCAUSM6zXh8IdBNQsUCnhUV7fQL6NiD3IcmaJ-USudtO9YheXpy2iVWZxxd5fsk/exec";
 
@@ -353,62 +353,67 @@ Please contact the customer to confirm the appointment.
                             onChange={handleChange}
                         />
 
+                            {
+                                id ? (
 
-                        {
-                            id ? (
+                                    <input
+                                        type="text"
+                                        className="
+                                            form-control
+                                            booking-input
+                                        "
+                                        value={
+                                            selectedService?.name || ""
+                                        }
+                                        disabled
+                                    />
 
-                                <input
-                                    type="text"
+                                ) : (
 
-                                    className="
-                                        form-control
-                                        booking-input
-                                    "
+                                    <select
+                                        name="service"
+                                        value={formData.service}
+                                        className="
+                                            form-control
+                                            booking-input
+                                        "
+                                        onChange={handleChange}
+                                        required
+                                    >
 
-                                    value={
-                                        selectedService?.name || ""
-                                    }
+                                        <option value="">
+                                            Select Service
+                                        </option>
 
-                                    disabled
-                                />
+                                        {
+                                            serviceCategories.map((category) => (
 
-                            ) : (
+                                                <optgroup
+                                                    key={category.id}
+                                                    label={category.name}
+                                                >
 
-                                <select
-                                    name="service"
+                                                    {
+                                                        category.services.map((service) => (
 
-                                    className="
-                                        form-control
-                                        booking-input
-                                    "
+                                                            <option
+                                                                key={service.id}
+                                                                value={service.id}
+                                                            >
+                                                                {service.name}
+                                                            </option>
 
-                                    onChange={handleChange}
-                                >
+                                                        ))
+                                                    }
 
-                                    <option value="">
+                                                </optgroup>
 
-                                        Select Service
+                                            ))
+                                        }
 
-                                    </option>
-
-                                    {
-                                        services.map((service) => (
-
-                                            <option
-                                                key={service.id}
-
-                                                value={service.id}
-                                            >
-
-                                                {service.name}
-
-                                            </option>
-                                        ))
-                                    }
-
-                                </select>
-                            )
-                        }
+                                    </select>
+                                )
+                            }
 
 
                         <div className="booking-field">
