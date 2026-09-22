@@ -472,73 +472,73 @@ const serviceCategories = [
                 id: 68,
                 name: "Keratin Treatment",
                 price: "Variable Price",
-                image: "/services/hairspa.jpg"
+                image: "/services/hair_treatment.webp"
             },
             {
                 id: 69,
                 name: "Smoothing",
                 price: "Variable Price",
-                image: "/services/hairspa.jpg"
+                image: "/services/hair_treatment.webp"
             },
             {
                 id: 70,
                 name: "Straightening",
                 price: "Variable Price",
-                image: "/services/hairspa.jpg"
+                image: "/services/hair_treatment.webp"
             },
             {
                 id: 71,
                 name: "Botox",
                 price: "Variable Price",
-                image: "/services/hairspa.jpg"
+                image: "/services/hair_treatment.webp"
             },
             {
                 id: 72,
                 name: "Nanoplastia",
                 price: "Variable Price",
-                image: "/services/hairspa.jpg"
+                image: "/services/hair_treatment.webp"
             },
             {
                 id: 73,
                 name: "Protein Treatment",
                 price: "Variable Price",
-                image: "/services/hairspa.jpg"
+                image: "/services/hair_treatment.webp"
             },
             {
                 id: 74,
                 name: "Deep Conditioning",
                 price: "Variable Price",
-                image: "/services/hairspa.jpg"
+                image: "/services/hair_treatment.webp"
             },
             {
                 id: 75,
                 name: "Hair Spa",
                 price: 1200,
-                image: "/services/hairspa.jpg"
+                image: "/services/hair_treatment.webp"
             },
             {
                 id: 76,
                 name: "Hair Spa - Premium",
                 price: 1400,
-                image: "/services/hairspa.jpg"
+                image: "/services/hair_treatment.webp"
             },
             {
                 id: 77,
                 name: "Head Massage",
                 price: 1000,
-                image: "/services/hairspa.jpg"
+                image: "/services/hair_treatment.webp"
             },
             {
                 id: 78,
                 name: "Hot Oil Massage",
                 price: 1000,
-                image: "/services/hairspa.jpg"
+                image: "/services/hair_treatment.webp"
             },
             {
                 id: 79,
                 name: "Dandruff Treatment",
                 price: 1500,
-                image: "/services/hairspa.jpg"
+                image: "/services/hair_treatment.webp"
             }
         ]
     },
