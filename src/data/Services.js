@@ -662,7 +662,7 @@ const serviceCategories = [
                 price: 10000,
                 description:
                     "Facial (Shahanas Diamond Facial with Veg Peel), Nair Art, Luxury Spa, Pedicure, French Manicure, Full Body Waxing, Bleach, Haircut and Threading.",
-                image: "/services/Gemini_Generated_Image_2tars32tars32tar.png"
+                image: "/services/makeup.webp"
             },
             {
                 id: 98,
@@ -670,7 +670,7 @@ const serviceCategories = [
                 price: 8000,
                 description:
                     "Facial (Shahanas Diamond Facial with Veg Peel), Luxury Spa, Pedicure, French Manicure, Full Body Waxing, Bleach, Haircut and Threading.",
-                image: "/services/Gemini_Generated_Image_2tars32tars32tar.png"
+                image: "/services/makeup.webp"
             },
             {
                 id: 99,
@@ -678,7 +678,7 @@ const serviceCategories = [
                 price: 5000,
                 description:
                     "Pearl Facial, Spa, Pedicure, Manicure, Waxing, Bleach, Haircut and Threading.",
-                image: "/services/Gemini_Generated_Image_2tars32tars32tar.png"
+                image: "/services/makeup.webp"
             },
             {
                 id: 100,
@@ -686,7 +686,7 @@ const serviceCategories = [
                 price: 12000,
                 description:
                     "Products used: Ofra, Antasia, PAC, etc. Lashes, hairstyle and lens if required. This package is provided only at the parlour.",
-                image: "/services/Gemini_Generated_Image_2tars32tars32tar.png"
+                image: "/services/makeup.webp"
             },
             {
                 id: 101,
@@ -694,7 +694,7 @@ const serviceCategories = [
                 price: 15000,
                 description:
                     "Products used: MAC, Huda Beauty, NARS, Bobbi Brown, etc. Lashes, hairstyle and lens if required.",
-                image: "/services/Gemini_Generated_Image_2tars32tars32tar.png"
+                image: "/services/makeup.webp"
             },
             {
                 id: 102,
@@ -702,7 +702,7 @@ const serviceCategories = [
                 price: 20000,
                 description:
                     "Products used: Temptu, NARS and Fenty. Lens and lashes provided if required. Advanced hairstyle is also available.",
-                image: "/services/Gemini_Generated_Image_2tars32tars32tar.png"
+                image: "/services/makeup.webp"
             }
         ]
     }
