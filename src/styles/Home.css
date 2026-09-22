@@ -221,27 +221,9 @@
             rgba(0, 0, 0, 0.08)
         );
 
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: flex-end;
-
-    padding: 24px;
+    justify-content: center;
 
     color: white;
-}
-
-
-.service-overlay h3 {
-
-    font-size: 2.2rem;
-
-    font-weight: 400;
-
-    margin: 0 0 14px;
-
-    letter-spacing: 1px;
 }
 
 
@@ -604,24 +586,9 @@
         padding-bottom: 30px;
     }
 
-
-    .service-slide {
-        height: auto;
-        aspect-ratio: 7 / 4;
-    }
-
-
     .service-overlay {
 
         padding: 20px;
-    }
-
-
-    .service-overlay h3 {
-
-        font-size: 2rem;
-
-        margin-bottom: 12px;
     }
 
 
@@ -634,6 +601,15 @@
     }
 }
 
+/* iPad Pro / larger tablets */
+@media (min-width: 1025px) and (max-width: 1366px) {
+
+    .service-slide {
+        height: auto;
+        aspect-ratio: 7 / 4;
+    }
+
+}
 
 /* =========================================
    MOBILE
@@ -724,14 +700,6 @@
     }
 
 
-    .service-overlay h3 {
-
-        font-size: 1.7rem;
-
-        margin-bottom: 10px;
-    }
-
-
     .service-btn {
 
         width: fit-content;
@@ -818,13 +786,6 @@
 
         height: 230px;
     }
-
-
-    .service-overlay h3 {
-
-        font-size: 1.5rem;
-    }
-
 
     .service-btn {
 

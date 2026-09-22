@@ -103,10 +103,6 @@ const ServicesSection = () => {
 
                                     <div className="service-overlay">
 
-                                        <h3>
-                                            {category.name}
-                                        </h3>
-
                                         <Link
                                             to="/services"
                                             className="service-btn"
