@@ -1,67 +1,65 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 
 import Swiper from "swiper";
-import { Autoplay,Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 import "swiper/css";
-import "swiper/css/pagination";
 
-const ServicesSection = ({ services }) => {
+import { serviceCategories } from "../data/Services";
+
+
+const ServicesSection = () => {
 
     useEffect(() => {
 
         const swiper = new Swiper(".services-swiper", {
-    
-            modules: [Autoplay, Pagination],
-    
+
+            modules: [Autoplay],
+
             loop: true,
-    
+
             centeredSlides: true,
-    
+
             slidesPerView: 3,
-    
+
             speed: 1200,
-    
+
             autoplay: {
                 delay: 2500,
                 disableOnInteraction: false,
                 pauseOnMouseEnter: false,
             },
-    
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-    
+
             breakpoints: {
-    
+
                 320: {
                     slidesPerView: 1,
                 },
-    
+
                 768: {
                     slidesPerView: 2,
                 },
-    
+
                 1024: {
                     slidesPerView: 3,
                 },
             },
-    
+
             on: {
                 init: function () {
-    
                     this.autoplay.start();
                 }
             }
+
         });
-    
+
         return () => {
             swiper.destroy(true, true);
         };
-    
-    }, [services]);
+
+    }, []);
+
 
     return (
 
@@ -77,57 +75,65 @@ const ServicesSection = ({ services }) => {
                     A range of high-quality beauty services
                 </h2>
 
+
                 <div className="swiper services-swiper">
 
                     <div className="swiper-wrapper">
 
                         {
-                            services.map((service) => (
+                            serviceCategories.map((category) => {
 
-                                <div
-                                    className="swiper-slide"
-                                    key={service.id}
-                                >
+                                const previewService =
+                                    category.services[0];
+
+                                return (
+
+                                    <div
+                                        className="swiper-slide"
+                                        key={category.id}
+                                    >
 
                                     <div className="service-slide">
 
-                                        <img
-                                            src={service.image}
-                                            alt={service.name}
-                                            className="service-slide-image"
-                                        />
+                                    <img
+                                        src={previewService.image}
+                                        alt={category.name}
+                                        className="service-slide-image"
+                                    />
 
-                                        <div className="service-overlay">
+                                    <div className="service-overlay">
 
-                                            <h3>{service.name}</h3>
-                                            <p>
-                                               ₹{service.price}
-                                            </p>
+                                        <h3>
+                                            {category.name}
+                                        </h3>
 
-                                            <Link
-                                                to={`/book-appointment/${service.id}`}
-                                                className="service-btn"
-                                            >
-                                                Book Appointment
-                                            </Link>
-
-                                        </div>
+                                        <Link
+                                            to="/services"
+                                            className="service-btn"
+                                        >
+                                            VIEW SERVICES
+                                        </Link>
 
                                     </div>
 
-                                </div>
-                            ))
+                                    </div>
+
+                                    </div>
+
+                                );
+
+                            })
                         }
 
                     </div>
-                    <div className="swiper-pagination"></div>
 
                 </div>
 
             </div>
 
         </div>
-    )
-}
+    );
+};
+
 
 export default ServicesSection;
