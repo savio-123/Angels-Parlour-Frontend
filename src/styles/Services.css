@@ -479,7 +479,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0;
+    margin-bottom: 3px;
 }
 
 .lux-card-bottom span {
