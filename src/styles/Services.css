@@ -418,7 +418,7 @@ body {
 
     height: 320px;
 
-    object-fit: cover;
+    object-fit: contain;
 
     object-position: center;
 
