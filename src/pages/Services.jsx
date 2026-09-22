@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 import InnerNavbar from "../components/InnerNavbar";
@@ -7,7 +8,7 @@ import Footer from "../components/Footer";
 import useReveal from "../hooks/useReveal";
 
 import "../styles/Services.css";
-import { services } from "../data/Services";
+import { serviceCategories } from "../data/Services";
 
 
 const Services = () => {
@@ -20,6 +21,8 @@ const Services = () => {
 
     const [escapeRef, escapeVisible] =
         useReveal();
+
+    const [openCategory, setOpenCategory] = useState(null);    
 
 
     return (
@@ -211,84 +214,132 @@ const Services = () => {
 
                 </div>
 
-                <div className="lux-services-cards">
+                <div className="service-categories">
 
-                    {
-                        services.map((service, index) => (
+                    {serviceCategories.map((category) => {
 
+                        const isOpen =
+                            openCategory === category.id;
+
+                        return (
                             <div
-                            className={`
-                                lux-service-card
-                                ${
-                                    cardsVisible
-                                        ? "card-visible"
-                                        : ""
-                                }
-                            `}
-                            style={{
-                                "--delay": `${index * 0.3}s`
-                            }}
-                            key={service.id}
-                        >
+                                key={category.id}
+                                className={`service-category ${
+                                    isOpen ? "category-open" : ""
+                                }`}
+                            >
 
-                                <div className="lux-card-image">
+                                {/* CATEGORY HEADER */}
 
-                                    <img
-                                        src={service.image}
-                                        alt={service.name}
+                                <button
+                                    type="button"
+                                    className="service-category-header"
+                                    onClick={() =>
+                                        setOpenCategory(
+                                            isOpen
+                                                ? null
+                                                : category.id
+                                        )
+                                    }
+                                    aria-expanded={isOpen}
+                                >
+
+                                    <span>
+                                        {category.name}
+                                    </span>
+
+                                    <ChevronDown
+                                        className="service-category-icon"
+                                        size={26}
                                     />
 
-                                </div>
+                                </button>
 
-                                <div className="lux-card-content">
 
-                                    <h3>
+                                {/* SERVICES */}
 
-                                        {service.name}
+                                {isOpen && (
 
-                                    </h3>
+                                    <div className="lux-services-cards">
 
-                                    <div className="lux-card-bottom">
+                                        {category.services.map(
+                                            (service, index) => (
 
-                                        <div>
+                                                <div
+                                                    className={`
+                                                        lux-service-card
+                                                        ${
+                                                            cardsVisible
+                                                                ? "card-visible"
+                                                                : ""
+                                                        }
+                                                    `}
+                                                    style={{
+                                                        "--delay":
+                                                            `${index * 0.12}s`
+                                                    }}
+                                                    key={service.id}
+                                                >
 
-                                            <span>
+                                                    <div className="lux-card-image">
 
-                                                STARTING FROM
+                                                        <img
+                                                            src={service.image}
+                                                            alt={service.name}
+                                                        />
 
-                                            </span>
+                                                    </div>
 
-                                            <h4>
 
-                                                ₹{service.price}
+                                                    <div className="lux-card-content">
 
-                                            </h4>
+                                                        <h3>
+                                                            {service.name}
+                                                        </h3>
 
-                                        </div>
 
-                                        <div className="lux-duration">
+                                                        <div className="lux-card-bottom">
 
-                                            ⏱ {service.duration} mins
+                                                            <div>
 
-                                        </div>
+                                                                <span>
+                                                                    PRICE
+                                                                </span>
+
+                                                                <h4>
+                                                                    {typeof service.price === "number"
+                                                                        ? `₹${service.price}`
+                                                                        : service.price
+                                                                    }
+                                                                </h4>
+
+                                                            </div>
+
+                                                        </div>
+
+
+                                                        <Link
+                                                            to={`/book-appointment/${service.id}`}
+                                                            className="lux-card-btn"
+                                                        >
+                                                            BOOK NOW
+                                                        </Link>
+
+                                                    </div>
+
+                                                </div>
+
+                                            )
+                                        )}
 
                                     </div>
 
-                                    <Link
-                                        to={`/book-appointment/${service.id}`}
-                                        className="lux-card-btn"
-                                    >
-
-                                        BOOK NOW
-
-                                    </Link>
-
-                                </div>
+                                )}
 
                             </div>
+                        );
 
-                        ))
-                    }
+                    })}
 
                 </div>
 

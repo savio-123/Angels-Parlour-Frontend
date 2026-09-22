@@ -921,12 +921,6 @@
             repeat(2, 1fr);
     }
 
-    .artists-grid {
-
-        grid-template-columns:
-            repeat(3, 1fr);
-    }
-
     .artist-image-wrapper {
 
         height: 420px;
@@ -1047,16 +1041,6 @@
     .artists-section {
 
         padding: 90px 0;
-    }
-
-    .artists-grid {
-
-        grid-template-columns:
-            repeat(3, 1fr);
-
-        
-
-        gap: 24px;
     }
 
     .artist-image-wrapper {
