@@ -551,103 +551,103 @@ const serviceCategories = [
                 id: 80,
                 name: "Hair Cutting Normal",
                 price: 150,
-                image: "/services/photo-1580618672591-eb180b1a973f.avif"
+                image: "/services/hair_cutting.webp"
             },
             {
                 id: 81,
                 name: "Boy Cut",
                 price: 200,
-                image: "/services/photo-1580618672591-eb180b1a973f.avif"
+                image: "/services/hair_cutting.webp"
             },
             {
                 id: 82,
                 name: "U Cut",
                 price: 250,
-                image: "/services/photo-1580618672591-eb180b1a973f.avif"
+                image: "/services/hair_cutting.webp"
             },
             {
                 id: 83,
                 name: "U Cut - Premium",
                 price: 300,
-                image: "/services/photo-1580618672591-eb180b1a973f.avif"
+                image: "/services/hair_cutting.webp"
             },
             {
                 id: 84,
                 name: "V Cut",
                 price: 300,
-                image: "/services/photo-1580618672591-eb180b1a973f.avif"
+                image: "/services/hair_cutting.webp"
             },
             {
                 id: 85,
                 name: "V Cut - Premium",
                 price: 400,
-                image: "/services/photo-1580618672591-eb180b1a973f.avif"
+                image: "/services/hair_cutting.webp"
             },
             {
                 id: 86,
                 name: "Diana Cut",
                 price: 300,
-                image: "/services/photo-1580618672591-eb180b1a973f.avif"
+                image: "/services/hair_cutting.webp"
             },
             {
                 id: 87,
                 name: "Diana Cut - Premium",
                 price: 450,
-                image: "/services/photo-1580618672591-eb180b1a973f.avif"
+                image: "/services/hair_cutting.webp"
             },
             {
                 id: 88,
                 name: "Change of Styling",
                 price: 600,
-                image: "/services/photo-1580618672591-eb180b1a973f.avif"
+                image: "/services/hair_cutting.webp"
             },
             {
                 id: 89,
                 name: "Step Cut",
                 price: 600,
-                image: "/services/photo-1580618672591-eb180b1a973f.avif"
+                image: "/services/hair_cutting.webp"
             },
             {
                 id: 90,
                 name: "Layer Cut",
                 price: 600,
-                image: "/services/photo-1580618672591-eb180b1a973f.avif"
+                image: "/services/hair_cutting.webp"
             },
             {
                 id: 91,
                 name: "Butterfly Cut",
                 price: 600,
-                image: "/services/photo-1580618672591-eb180b1a973f.avif"
+                image: "/services/hair_cutting.webp"
             },
             {
                 id: 92,
                 name: "Wolf Cut",
                 price: 500,
-                image: "/services/photo-1580618672591-eb180b1a973f.avif"
+                image: "/services/hair_cutting.webp"
             },
             {
                 id: 93,
                 name: "Razor Cut",
                 price: 600,
-                image: "/services/photo-1580618672591-eb180b1a973f.avif"
+                image: "/services/hair_cutting.webp"
             },
             {
                 id: 94,
                 name: "Blow Dry",
                 price: 800,
-                image: "/services/photo-1580618672591-eb180b1a973f.avif"
+                image: "/services/hair_cutting.webp"
             },
             {
                 id: 95,
                 name: "Temporary Ironing",
                 price: 1000,
-                image: "/services/photo-1580618672591-eb180b1a973f.avif"
+                image: "/services/hair_cutting.webp"
             },
             {
                 id: 96,
                 name: "Hair Dye - Henna - Colouring",
                 price: "Variable Price",
-                image: "/services/photo-1580618672591-eb180b1a973f.avif"
+                image: "/services/hair_cutting.webp"
             }
         ]
     },
