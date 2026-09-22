@@ -3,7 +3,6 @@
 ========================================= */
 
 body {
-
     background: #f7f4ef;
 }
 
@@ -13,13 +12,12 @@ body {
 ========================================= */
 
 .lux-services-hero {
-
     padding: 110px 0 80px;
 
     background:
         radial-gradient(
             circle at top left,
-            rgba(214,190,170,0.18),
+            rgba(214, 190, 170, 0.18),
             transparent 35%
         ),
         #f7f4ef;
@@ -27,7 +25,6 @@ body {
 
 
 .lux-services-grid {
-
     display: grid;
 
     grid-template-columns:
@@ -44,7 +41,6 @@ body {
 ========================================= */
 
 .lux-mini-title {
-
     font-size: 12px;
 
     letter-spacing: 4px;
@@ -58,7 +54,6 @@ body {
 
 
 .lux-mini-title::before {
-
     content: "";
 
     width: 40px;
@@ -76,7 +71,6 @@ body {
 
 
 .lux-services-title {
-
     font-size: 5rem;
 
     line-height: 1;
@@ -94,7 +88,6 @@ body {
 
 
 .lux-services-description {
-
     color: #7d746b;
 
     line-height: 2;
@@ -110,7 +103,6 @@ body {
 ========================================= */
 
 .lux-hero-buttons {
-
     display: flex;
 
     gap: 16px;
@@ -118,7 +110,6 @@ body {
 
 
 .lux-primary-btn {
-
     padding: 16px 28px;
 
     background: #c8a46a;
@@ -136,7 +127,6 @@ body {
 
 
 .lux-primary-btn:hover {
-
     transform: translateY(-3px);
 }
 
@@ -146,13 +136,11 @@ body {
 ========================================= */
 
 .lux-services-right {
-
     position: relative;
 }
 
 
 .lux-hero-image-wrapper {
-
     border-radius: 320px 320px 0 0;
 
     overflow: hidden;
@@ -160,12 +148,11 @@ body {
     border: 5px solid white;
 
     box-shadow:
-        0 15px 50px rgba(0,0,0,0.12);
+        0 15px 50px rgba(0, 0, 0, 0.12);
 }
 
 
 .lux-hero-image-wrapper img {
-
     width: 100%;
 
     height: 500px;
@@ -177,14 +164,13 @@ body {
 
 
 .lux-floating-review {
-
     position: absolute;
 
     left: -30px;
 
     bottom: -20px;
 
-    background: rgba(255,255,255,0.7);
+    background: rgba(255, 255, 255, 0.7);
 
     backdrop-filter: blur(10px);
 
@@ -199,7 +185,7 @@ body {
     color: #5c544d;
 
     box-shadow:
-        0 8px 30px rgba(0,0,0,0.08);
+        0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
 
@@ -208,7 +194,6 @@ body {
 ========================================= */
 
 .lux-art-section {
-
     padding: 120px 20px;
 
     text-align: center;
@@ -216,7 +201,6 @@ body {
 
 
 .lux-art-content {
-
     max-width: 760px;
 
     margin: auto;
@@ -224,7 +208,6 @@ body {
 
 
 .lux-art-icon {
-
     color: #c8a46a;
 
     font-size: 2rem;
@@ -234,7 +217,6 @@ body {
 
 
 .lux-art-content h2 {
-
     font-size: 4rem;
 
     font-weight: 300;
@@ -250,7 +232,6 @@ body {
 
 
 .lux-art-content p {
-
     color: #7d746b;
 
     line-height: 2;
@@ -262,19 +243,16 @@ body {
 ========================================= */
 
 .lux-services-section {
-
     padding: 120px 0;
 }
 
 
 .lux-services-header {
-
     margin-bottom: 60px;
 }
 
 
 .lux-services-header h2 {
-
     font-size: 4rem;
 
     font-weight: 300;
@@ -288,11 +266,132 @@ body {
 
 
 /* =========================================
+   SERVICE CATEGORIES
+========================================= */
+
+.service-categories {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+
+.service-category {
+    width: 100%;
+}
+
+
+/* =========================================
+   CATEGORY HEADER
+========================================= */
+
+.service-category-header {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 24px 28px;
+
+    background: white;
+
+    border: 1px solid rgba(0, 0, 0, 0.06);
+
+    border-radius: 16px;
+
+    color: #1e1b18;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size: 2rem;
+
+    font-weight: 400;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-radius 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.service-category-header:hover {
+    background: #fbf8f3;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================
+   OPEN CATEGORY
+========================================= */
+
+.service-category.category-open
+.service-category-header {
+    background: #1e1b18;
+
+    color: white;
+
+    border-radius:
+        16px 16px 0 0;
+}
+
+
+/* =========================================
+   CATEGORY ARROW
+========================================= */
+
+.service-category-icon {
+    color: #c8a46a;
+
+    transition:
+        transform 0.35s ease;
+}
+
+
+.service-category.category-open
+.service-category-icon {
+    transform: rotate(180deg);
+}
+
+
+/* =========================================
+   CATEGORY SERVICES AREA
+========================================= */
+
+.service-category
+.lux-services-cards {
+    padding: 30px;
+
+    background: #fbf8f3;
+
+    border:
+        1px solid rgba(0, 0, 0, 0.06);
+
+    border-top: none;
+
+    border-radius:
+        0 0 16px 16px;
+}
+
+
+/* =========================================
    CARDS GRID
 ========================================= */
 
 .lux-services-cards {
-
     display: grid;
 
     grid-template-columns:
@@ -303,18 +402,17 @@ body {
     align-items: start;
 }
 
+
 /* =========================================
    CARD IMAGE
 ========================================= */
 
 .lux-card-image {
-
     overflow: hidden;
 }
 
 
 .lux-card-image img {
-
     width: 100%;
 
     height: 320px;
@@ -329,9 +427,9 @@ body {
         transform 0.45s ease;
 }
 
+
 .lux-service-card:hover
 .lux-card-image img {
-
     transform: scale(1.04);
 }
 
@@ -341,7 +439,6 @@ body {
 ========================================= */
 
 .lux-card-content {
-
     padding: 28px;
 
     display: flex;
@@ -350,14 +447,13 @@ body {
 
     justify-content: flex-start;
 
-    min-height: 260px;
+    min-height: 230px;
 
     box-sizing: border-box;
 }
 
 
 .lux-card-content h3 {
-
     font-size: 2rem;
 
     font-weight: 300;
@@ -373,11 +469,30 @@ body {
 
 
 /* =========================================
+   SERVICE DESCRIPTION
+========================================= */
+
+.lux-card-description {
+    color: #7d746b;
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+
+    margin:
+        -10px 0 24px;
+
+    font-family:
+        Arial,
+        sans-serif;
+}
+
+
+/* =========================================
    CARD BOTTOM
 ========================================= */
 
 .lux-card-bottom {
-
     display: flex;
 
     justify-content: space-between;
@@ -389,7 +504,6 @@ body {
 
 
 .lux-card-bottom span {
-
     font-size: 11px;
 
     letter-spacing: 2px;
@@ -399,7 +513,6 @@ body {
 
 
 .lux-card-bottom h4 {
-
     margin-top: 8px;
 
     font-size: 1.3rem;
@@ -408,26 +521,11 @@ body {
 }
 
 
-.lux-duration {
-
-    background: #f7f4ef;
-
-    padding: 10px 16px;
-
-    border-radius: 50px;
-
-    font-size: 0.85rem;
-
-    color: #6f665d;
-}
-
-
 /* =========================================
    CARD BUTTON
 ========================================= */
 
 .lux-card-btn {
-
     display: inline-block;
 
     padding: 14px 24px;
@@ -447,7 +545,6 @@ body {
 
 
 .lux-card-btn:hover {
-
     background: #c8a46a;
 }
 
@@ -457,7 +554,6 @@ body {
 ========================================= */
 
 .lux-escape-section {
-
     background: #231d19;
 
     padding: 120px 0;
@@ -467,7 +563,6 @@ body {
 
 
 .lux-escape-grid {
-
     display: grid;
 
     grid-template-columns:
@@ -480,7 +575,6 @@ body {
 
 
 .lux-escape-content h2 {
-
     font-size: 4.5rem;
 
     line-height: 1;
@@ -496,7 +590,6 @@ body {
 
 
 .lux-escape-content span {
-
     color: #d2a75f;
 
     font-style: italic;
@@ -504,8 +597,7 @@ body {
 
 
 .lux-escape-content p {
-
-    color: rgba(255,255,255,0.72);
+    color: rgba(255, 255, 255, 0.72);
 
     line-height: 2;
 
@@ -514,7 +606,6 @@ body {
 
 
 .lux-escape-content ul {
-
     list-style: none;
 
     padding: 0;
@@ -522,15 +613,13 @@ body {
 
 
 .lux-escape-content li {
-
     margin-bottom: 18px;
 
-    color: rgba(255,255,255,0.85);
+    color: rgba(255, 255, 255, 0.85);
 }
 
 
 .lux-escape-content li::before {
-
     content: "✓";
 
     color: #d2a75f;
@@ -544,7 +633,6 @@ body {
 ========================================= */
 
 .lux-escape-images {
-
     display: flex;
 
     align-items: center;
@@ -554,7 +642,6 @@ body {
 
 
 .escape-img-one {
-
     width: 400px;
 
     height: 380px;
@@ -569,14 +656,12 @@ body {
 
 
 .escape-img-two {
-
     width: 400px;
 
     height: 380px;
 
     object-fit: cover;
 
-    
     object-position: center top;
 
     border-radius:
@@ -589,7 +674,6 @@ body {
 ========================================= */
 
 .lux-art-section {
-
     opacity: 0;
 
     filter: blur(12px);
@@ -599,19 +683,19 @@ body {
         filter 1.2s ease;
 }
 
-.lux-art-section.art-visible {
 
+.lux-art-section.art-visible {
     opacity: 1;
 
     filter: blur(0);
 }
+
 
 /* =========================================
    CARD REVEAL
 ========================================= */
 
 .lux-service-card {
-
     display: flex;
 
     flex-direction: column;
@@ -622,35 +706,35 @@ body {
 
     border-radius: 18px;
 
-    border: 1px solid rgba(0,0,0,0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 
     height: 100%;
 
     opacity: 0;
 
     box-shadow:
-        0 0 0 rgba(0,0,0,0);
+        0 0 0 rgba(0, 0, 0, 0);
 
     transition:
         box-shadow 0.15s ease,
         transform 0.15s ease;
 }
 
-.lux-service-card.card-visible {
 
+.lux-service-card.card-visible {
     animation:
         cardReveal 0.8s
-        cubic-bezier(0.22,1,0.36,1)
+        cubic-bezier(0.22, 1, 0.36, 1)
         forwards;
 
     animation-delay:
         var(--delay);
 }
 
+
 @keyframes cardReveal {
 
     from {
-
         opacity: 0;
 
         transform:
@@ -659,7 +743,6 @@ body {
     }
 
     to {
-
         opacity: 1;
 
         transform:
@@ -667,24 +750,25 @@ body {
             rotateX(0);
     }
 }
+
+
 /* =========================================
    HOVER
 ========================================= */
 
 .lux-service-card:hover {
-
     transform: translateY(-6px);
 
     box-shadow:
-        0 12px 40px rgba(0,0,0,5);
+        0 12px 40px rgba(0, 0, 0, 0.08);
 }
+
 
 /* =========================================
    ESCAPE REVEAL
 ========================================= */
 
 .lux-escape-content {
-
     opacity: 0;
 
     transform:
@@ -694,8 +778,8 @@ body {
         all 1s ease;
 }
 
-.lux-escape-images {
 
+.lux-escape-images {
     opacity: 0;
 
     transform:
@@ -705,25 +789,27 @@ body {
         all 1s ease;
 }
 
-.escape-left-active {
 
+.escape-left-active {
     opacity: 1;
 
     transform:
         translateX(0);
 }
+
 
 .escape-right-active {
-
     opacity: 1;
 
     transform:
         translateX(0);
 }
+
 
 /* =========================================
    RESPONSIVE
 ========================================= */
+
 
 /* =========================================
    LARGE TABLETS
@@ -734,39 +820,38 @@ body {
 
     .lux-services-grid,
     .lux-escape-grid {
-
         gap: 50px;
     }
 
-    .lux-services-title {
 
+    .lux-services-title {
         font-size: 4.2rem;
     }
 
-    .lux-services-cards {
 
+    .lux-services-cards {
         grid-template-columns:
             repeat(2, 1fr);
     }
 
-    .lux-card-image img {
 
+    .lux-card-image img {
         height: 280px;
     }
 
-    .lux-card-content {
 
-        min-height: 280px;
+    .lux-card-content {
+        min-height: 230px;
     }
 
-    .lux-escape-images {
 
+    .lux-escape-images {
         gap: 24px;
     }
 
+
     .escape-img-one,
     .escape-img-two {
-
         width: 100%;
 
         height: 300px;
@@ -782,73 +867,72 @@ body {
 @media (max-width: 992px) {
 
     .container {
-
         padding-left: 28px !important;
 
         padding-right: 28px !important;
     }
 
+
     .lux-services-grid,
     .lux-escape-grid {
-
         grid-template-columns: 1fr;
 
         gap: 60px;
     }
 
-    .lux-services-right {
 
+    .lux-services-right {
         order: -1;
     }
 
-    .lux-services-title {
 
+    .lux-services-title {
         font-size: 3.8rem;
     }
 
-    .lux-services-description {
 
+    .lux-services-description {
         max-width: 100%;
     }
 
-    .lux-hero-buttons {
 
+    .lux-hero-buttons {
         flex-wrap: wrap;
     }
 
-    .lux-services-cards {
 
+    .lux-services-cards {
         grid-template-columns:
             repeat(2, 1fr);
 
         gap: 24px;
     }
 
-    .lux-card-image img {
 
+    .lux-card-image img {
         height: 240px;
     }
 
-    .lux-card-content {
 
+    .lux-card-content {
         padding: 22px;
 
-        min-height: 250px;
+        min-height: 230px;
     }
 
-    .lux-card-content h3 {
 
+    .lux-card-content h3 {
         font-size: 1.8rem;
     }
 
-    .lux-escape-images {
 
+    .lux-escape-images {
         justify-content: center;
     }
 
+
     .escape-img-one,
     .escape-img-two {
-
         width: 320px;
 
         height: 260px;
@@ -863,60 +947,78 @@ body {
 @media (max-width: 767px) {
 
     .container {
-
         padding-left: 18px !important;
 
         padding-right: 18px !important;
     }
 
-    .lux-services-hero {
 
+    .lux-services-hero {
         padding: 100px 0 60px;
     }
 
-    .lux-services-grid {
 
+    .lux-services-grid {
         gap: 40px;
     }
 
-    .lux-services-title {
 
+    .lux-services-title {
         font-size: 2.8rem;
 
         line-height: 1;
     }
 
-    .lux-services-description {
 
+    .lux-services-description {
         font-size: 0.95rem;
 
         line-height: 1.8;
     }
 
-    .lux-primary-btn {
 
+    .lux-primary-btn {
         width: 100%;
 
         text-align: center;
     }
 
-    .lux-services-cards {
 
+    /* CATEGORY HEADER */
+
+    .service-category-header {
+        padding: 20px;
+
+        font-size: 1.7rem;
+    }
+
+
+    /* CATEGORY CONTENT */
+
+    .service-category
+    .lux-services-cards {
+        padding: 18px;
+    }
+
+
+    /* CARDS */
+
+    .lux-services-cards {
         grid-template-columns: 1fr;
     }
 
-    .lux-card-image img {
 
+    .lux-card-image img {
         height: 240px;
     }
 
-    .lux-card-content {
 
+    .lux-card-content {
         min-height: auto;
     }
 
-    .lux-card-bottom {
 
+    .lux-card-bottom {
         flex-direction: column;
 
         align-items: flex-start;
@@ -924,20 +1026,20 @@ body {
         gap: 14px;
     }
 
-    .lux-card-btn {
 
+    .lux-card-btn {
         width: 100%;
 
         text-align: center;
     }
 
-    .lux-escape-images {
 
+    .lux-escape-images {
         flex-direction: column;
     }
 
-    .escape-img-one {
 
+    .escape-img-one {
         width: 100%;
 
         height: 560px;
@@ -946,8 +1048,8 @@ body {
             140px 140px 0 0;
     }
 
-    .escape-img-two {
 
+    .escape-img-two {
         display: none;
     }
 }
@@ -960,37 +1062,37 @@ body {
 @media (max-width: 480px) {
 
     .lux-services-title {
-
         font-size: 2.3rem;
     }
+
 
     .lux-art-content h2,
     .lux-services-header h2,
     .lux-escape-content h2 {
-
         font-size: 2rem;
     }
 
-    .lux-hero-image-wrapper img {
 
+    .lux-hero-image-wrapper img {
         height: 300px;
-        animation: heroZoom 8s ease forwards;
+
+        animation:
+            heroZoom 8s ease forwards;
     }
+
 
     .lux-card-image img {
-
         height: 220px;
     }
+
 
     @keyframes heroZoom {
 
         from {
-    
             transform: scale(1.08);
         }
-    
+
         to {
-    
             transform: scale(1);
         }
     }
