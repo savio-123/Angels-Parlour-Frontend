@@ -297,6 +297,13 @@ const Services = () => {
                                                             {service.name}
                                                         </h3>
 
+                                                        {service.description && (
+                                                            <p className="lux-card-description">
+                                                                {service.description}
+                                                            </p>
+                                                        )}
+
+
 
                                                         <div className="lux-card-bottom">
 
