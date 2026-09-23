@@ -16,16 +16,18 @@
 }
 
 .works-main-title {
-
     font-family: 'Cormorant Garamond', serif;
     text-align: center;
-    font-size: 4rem;
+    font-size: clamp(2rem, 8vw, 4rem);
     font-weight: 500;
     line-height: 1.1;
+    width: 100%;
     max-width: 900px;
-    margin: auto;
-    margin-bottom: 30px;
+    padding: 0 15px;
+    margin: 0 auto 30px;
     color: #020a11;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
 }
 
 
