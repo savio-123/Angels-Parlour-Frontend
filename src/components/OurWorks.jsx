@@ -18,21 +18,21 @@ function OurWorks() {
         },
 
         {
-            thumbnail: "/works/Screenshot 2026-05-24 111359.png",
+            thumbnail: "/works/salon_portrait_4k.webp",
 
             link:
                 "https://www.instagram.com/reel/DWdsL7uDgni/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
         },
 
         {
-            thumbnail: "/works/Screenshot 2026-05-24 111349.png",
+            thumbnail: "/works/haircut_portrait_enhanced.webp",
 
             link:
                 "https://www.instagram.com/reel/DXLkFmhucRP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
         },
 
         {
-            thumbnail: "/works/Screenshot 2026-05-24 111326.png",
+            thumbnail: "/works/hair_salon_4k.webp",
 
             link:
                 "https://www.instagram.com/reel/DXY6lzrILPk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
