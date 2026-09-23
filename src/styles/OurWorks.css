@@ -42,13 +42,10 @@
 
 
 .work-image {
-
     width: 100%;
-
-    height: 100px;
-
-    object-fit: cover;
-
+    height: auto;
+    display: block;
+    object-fit: contain;
     transition: 0.5s ease;
 }
 
@@ -127,14 +124,13 @@
 @media (max-width: 767px) {
 
     .works-main-title {
-
         font-size: 2.8rem;
-
         padding: 0 20px;
     }
 
     .work-image {
-        height: 300px;
+        width: 100%;
+        height: auto;
     }
 }
 

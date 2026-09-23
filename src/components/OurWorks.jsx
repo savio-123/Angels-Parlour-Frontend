@@ -64,7 +64,7 @@ function OurWorks() {
                         reels.map((reel, index) => (
 
                             <div
-                                className="col-md-3"
+                                className="col-6 col-md-3"
                                 key={index}
                             >
 
