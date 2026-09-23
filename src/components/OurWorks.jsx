@@ -11,7 +11,7 @@ function OurWorks() {
     const reels = [
 
         {
-            thumbnail: "/works/Screenshot 2026-05-24 111410.png",
+            thumbnail: "/works/hair_photo_4k_enhanced.webp",
 
             link:
                 "https://www.instagram.com/reel/DWgAOGMjkEI/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
