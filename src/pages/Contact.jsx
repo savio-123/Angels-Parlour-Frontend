@@ -179,7 +179,7 @@ function Contact() {
     
         const whatsappURL =
     
-            `https://wa.me/918075336873?text=${encodeURIComponent(
+            `https://wa.me/919946935725?text=${encodeURIComponent(
                 whatsappMessage
             )}`;
     
@@ -493,7 +493,7 @@ function Contact() {
 
                     <div className="hours-row">
 
-                        <span>Mon–Fri</span>
+                        <span>Mon–Sat</span>
 
                         <span>9:30 AM – 7:00 PM</span>
 
@@ -501,17 +501,9 @@ function Contact() {
 
                     <div className="hours-row">
 
-                        <span>Saturday</span>
-
-                        <span>9:00 AM – 8:00 PM</span>
-
-                    </div>
-
-                    <div className="hours-row">
-
                         <span>Sunday</span>
 
-                        <span>9:00 AM – 8:00 PM</span>
+                        <span>11:00 AM – 6:30 PM</span>
 
                     </div>
 
