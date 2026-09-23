@@ -45,7 +45,7 @@
 
     width: 100%;
 
-    height: 250px;
+    height: 300px;
 
     object-fit: cover;
 
@@ -134,7 +134,7 @@
     }
 
     .work-image {
-        height: 500px;
+        height: 300px;
     }
 }
 
