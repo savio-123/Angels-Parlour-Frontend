@@ -1,4 +1,8 @@
-import React, { useState } from "react";
+import React, {
+    useLayoutEffect,
+    useRef,
+    useState
+} from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 import { Helmet } from "react-helmet-async";
@@ -23,6 +27,31 @@ const Services = () => {
         useReveal();
 
     const [openCategory, setOpenCategory] = useState(null);    
+    const scrollPosition = useRef(0);
+    const preserveScroll = useRef(false);
+
+    const handleCategoryToggle = (categoryId) => {
+
+        scrollPosition.current = window.scrollY;
+        preserveScroll.current = true;
+        setOpenCategory((current) =>
+            current === categoryId
+                ? null
+                : categoryId
+        );
+    };
+
+    useLayoutEffect(() => {
+
+        if (preserveScroll.current) {
+            window.scrollTo(
+                0,
+                scrollPosition.current
+            );   
+            preserveScroll.current = false;
+        }
+    
+    }, [openCategory]);
 
 
     return (
@@ -235,11 +264,7 @@ const Services = () => {
                                     type="button"
                                     className="service-category-header"
                                     onClick={() =>
-                                        setOpenCategory(
-                                            isOpen
-                                                ? null
-                                                : category.id
-                                        )
+                                        handleCategoryToggle(category.id)
                                     }
                                     aria-expanded={isOpen}
                                 >
