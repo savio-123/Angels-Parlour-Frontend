@@ -26,30 +26,42 @@ const Services = () => {
     const [escapeRef, escapeVisible] =
         useReveal();
 
-    const [openCategory, setOpenCategory] = useState(null);    
-    const scrollPosition = useRef(0);
-    const preserveScroll = useRef(false);
-
-    const handleCategoryToggle = (categoryId) => {
-
-        scrollPosition.current = window.scrollY;
-        preserveScroll.current = true;
+    const [openCategory, setOpenCategory] = useState(null);
+    const categoryPosition = useRef(null);
+    
+    const handleCategoryToggle = (categoryId, event) => {
+        const button = event.currentTarget;
+        categoryPosition.current = {
+            categoryId,
+            top: button.getBoundingClientRect().top
+        };
+    
         setOpenCategory((current) =>
             current === categoryId
                 ? null
                 : categoryId
         );
     };
-
+    
     useLayoutEffect(() => {
 
-        if (preserveScroll.current) {
-            window.scrollTo(
+        if (!categoryPosition.current) return;
+        const { categoryId, top } = categoryPosition.current;
+
+        requestAnimationFrame(() => {
+            const button = document.querySelector(
+                `[data-category-id="${categoryId}"]`
+            );
+    
+            if (!button) return;   
+            const newTop = button.getBoundingClientRect().top; 
+            window.scrollBy(
                 0,
-                scrollPosition.current
-            );   
-            preserveScroll.current = false;
-        }
+                newTop - top
+            );
+    
+            categoryPosition.current = null;
+        });
     
     }, [openCategory]);
 
@@ -263,8 +275,9 @@ const Services = () => {
                                 <button
                                     type="button"
                                     className="service-category-header"
-                                    onClick={() =>
-                                        handleCategoryToggle(category.id)
+                                    data-category-id={category.id}
+                                    onClick={(event) =>
+                                        handleCategoryToggle(category.id, event)
                                     }
                                     aria-expanded={isOpen}
                                 >
