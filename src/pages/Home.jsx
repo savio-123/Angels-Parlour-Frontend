@@ -7,6 +7,7 @@ import WhyChooseUs from "../components/WhyChooseUs";
 import ServicesSection from "../components/ServicesSection";
 import OurWorks from "../components/OurWorks";
 import Gallery from '../components/Gallery';
+import TestimonialSection from "../components/TestimonialSection";
 import Footer from '../components/Footer';
 import MovingGallery from '../components/MovingGallery';
 import LocalBusinessSchema from "../components/SEO/LocalBusinessSchema";
@@ -149,9 +150,12 @@ const Home = () => {
                 <Gallery />
             </RevealOnScroll>
 
+            <TestimonialSection />
+
             <RevealOnScroll animation="scale">
                 <MovingGallery />
             </RevealOnScroll>
+
             <Footer />
 
         </>

@@ -224,7 +224,7 @@ const About = () => {
 
                                 <span>
 
-                                    TRUSTED BY 1000+ WOMEN
+                                    TRUSTED BY 5000+ WOMEN
 
                                 </span>
 
@@ -363,7 +363,7 @@ const About = () => {
 
                             <h2>
 
-                                8+
+                                20+
 
                             </h2>
 
@@ -379,7 +379,7 @@ const About = () => {
 
                             <h2>
 
-                                500+
+                                2000+
 
                             </h2>
 
