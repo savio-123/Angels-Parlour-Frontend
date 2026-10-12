@@ -428,7 +428,8 @@
     flex-direction: column;
 
     justify-content: flex-start;
-    gap: 35px;
+
+    gap: 70px;
 
     transition: 0.4s ease;
 }
