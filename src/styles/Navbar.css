@@ -421,13 +421,14 @@
 
     z-index: 1500;
 
-    padding: 50px 30px;
+    padding: 20px 30px;
 
     display: flex;
 
     flex-direction: column;
 
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 35px;
 
     transition: 0.4s ease;
 }
@@ -471,8 +472,6 @@
     flex-direction: column;
 
     gap: 30px;
-
-    margin-top: 10px;
 }
 
 
