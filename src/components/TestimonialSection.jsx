@@ -49,7 +49,6 @@ const testimonials = [
     },
 ];
 
-// Each image manages its own fallback state.
 const ReviewImage = ({ src, alt, initial, thumbnail = false }) => {
     const [hasError, setHasError] = useState(false);
 
