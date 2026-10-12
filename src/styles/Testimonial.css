@@ -32,21 +32,23 @@
     line-height: 1.8;
 }
 
+/* Main review card */
+
 .testimonial-carousel {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 65px;
     max-width: 1080px;
     margin: 0 auto;
 }
 
 .testimonial-feature {
+    width: 100%;
+    min-width: 0;
     background: #28211c;
     color: #fffaf3;
     padding: clamp(28px, 4vw, 48px);
     border-radius: 4px 55px 4px 4px;
-    min-width: 0;
     box-shadow: 0 22px 50px rgba(40, 33, 28, 0.12);
 }
 
@@ -72,6 +74,8 @@
     color: #d9c9b4;
 }
 
+/* Star rating */
+
 .testimonial-rating {
     display: flex;
     align-items: center;
@@ -86,6 +90,8 @@
     font-size: 0.85rem;
     margin-left: 8px;
 }
+
+/* Review text */
 
 .testimonial-review-text {
     font-family: "Cormorant Garamond", serif;
@@ -102,11 +108,14 @@
         opacity: 0;
         transform: translateY(8px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
+/* Reviewer details and navigation */
 
 .testimonial-feature-bottom {
     display: flex;
@@ -123,13 +132,14 @@
     align-items: center;
     gap: 12px;
     min-width: 0;
+    flex: 1 1 auto;
 }
 
 .testimonial-reviewer-photo {
     position: relative;
     width: 48px;
     height: 48px;
-    flex-shrink: 0;
+    flex: 0 0 48px;
     border-radius: 50%;
     overflow: hidden;
     background: #c8a46a;
@@ -143,17 +153,30 @@
     object-fit: cover;
 }
 
-.testimonial-reviewer-photo .testimonial-initial,
+/* Shared fallback styling */
+
+.testimonial-initial,
 .testimonial-thumb-initial {
     position: absolute;
     inset: 0;
-    display: none;
     align-items: center;
     justify-content: center;
     background: #c8a46a;
     color: #28211c;
     font-family: "Cormorant Garamond", serif;
     font-size: 1.4rem;
+    border-radius: 50%;
+}
+
+/* Hidden until React renders the fallback */
+
+.testimonial-reviewer-photo .testimonial-initial,
+.testimonial-thumb .testimonial-thumb-initial {
+    display: flex;
+}
+
+.testimonial-reviewer-details {
+    min-width: 0;
 }
 
 .testimonial-reviewer h3 {
@@ -162,6 +185,7 @@
     font-weight: 600;
     margin: 0 0 5px;
     color: #fffaf3;
+    overflow-wrap: anywhere;
 }
 
 .testimonial-reviewer p {
@@ -174,7 +198,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    flex-shrink: 0;
+    flex: 0 0 auto;
 }
 
 .testimonial-controls button {
@@ -210,6 +234,8 @@
     padding: 0 4px;
 }
 
+/* Reviewer thumbnails */
+
 .testimonial-picker {
     max-width: 1080px;
     margin: 55px auto 0;
@@ -239,6 +265,7 @@
     position: relative;
     width: 62px;
     height: 62px;
+    flex: 0 0 auto;
     padding: 0;
     border: 3px solid transparent;
     border-radius: 50%;
@@ -247,7 +274,9 @@
     cursor: pointer;
     opacity: 0.6;
     transform: scale(0.92);
-    transition: opacity 0.25s ease, transform 0.25s ease,
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
         border-color 0.25s ease;
 }
 
@@ -263,10 +292,7 @@
     box-shadow: 0 5px 18px rgba(40, 33, 28, 0.16);
 }
 
-.testimonial-thumb-initial {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 1.4rem;
-}
+/* Google reviews link */
 
 .testimonial-footer {
     display: flex;
@@ -302,12 +328,9 @@
     border-color: #28211c;
 }
 
-@media (max-width: 900px) {
-    .testimonial-carousel {
-        grid-template-columns: 1fr 0.75fr;
-        gap: 30px;
-    }
+/* Tablets */
 
+@media (max-width: 900px) {
     .testimonial-review-text {
         min-height: 220px;
     }
@@ -322,6 +345,8 @@
     }
 }
 
+/* Mobile phones */
+
 @media (max-width: 650px) {
     .testimonial-section {
         padding: 65px 0;
@@ -335,13 +360,8 @@
         font-size: 2.8rem;
     }
 
-    .testimonial-carousel {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
     .testimonial-feature {
-        padding: 28px 23px;
+        padding: 28px 18px;
         border-radius: 4px 35px 4px 4px;
     }
 
@@ -351,21 +371,41 @@
     }
 
     .testimonial-feature-bottom {
-        align-items: flex-start;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 8px;
     }
 
-    .testimonial-visual {
-        grid-row: 1;
+    .testimonial-reviewer {
+        gap: 8px;
     }
 
-    .testimonial-image-frame {
-        max-width: 250px;
-        aspect-ratio: 4 / 4.5;
+    .testimonial-reviewer-photo {
+        width: 40px;
+        height: 40px;
+        flex-basis: 40px;
     }
 
-    .testimonial-decoration {
-        right: 5px;
+    .testimonial-reviewer h3 {
+        font-size: 0.78rem;
+        line-height: 1.2;
+    }
+
+    .testimonial-reviewer p {
+        font-size: 0.68rem;
+    }
+
+    .testimonial-controls {
+        gap: 5px;
+    }
+
+    .testimonial-controls button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .testimonial-controls > span {
+        font-size: 0.7rem;
     }
 
     .testimonial-picker {
@@ -396,6 +436,36 @@
         max-width: 310px;
     }
 }
+
+/* Very narrow phones */
+
+@media (max-width: 360px) {
+    .testimonial-feature {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .testimonial-reviewer-photo {
+        width: 34px;
+        height: 34px;
+        flex-basis: 34px;
+    }
+
+    .testimonial-reviewer {
+        gap: 6px;
+    }
+
+    .testimonial-controls {
+        gap: 4px;
+    }
+
+    .testimonial-controls button {
+        width: 27px;
+        height: 27px;
+    }
+}
+
+/* Respect reduced-motion preferences */
 
 @media (prefers-reduced-motion: reduce) {
     .testimonial-review-text {

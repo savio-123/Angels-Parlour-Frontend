@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { FaGoogle } from "react-icons/fa";
 import {
@@ -7,7 +6,6 @@ import {
     HiArrowUpRight,
     HiStar,
 } from "react-icons/hi2";
-
 import "../styles/Testimonial.css";
 
 const GOOGLE_REVIEWS_URL = "https://maps.app.goo.gl/XKLBR9D9FD8sQLHv7";
@@ -51,37 +49,65 @@ const testimonials = [
     },
 ];
 
+// Each image manages its own fallback state.
+const ReviewImage = ({ src, alt, initial, thumbnail = false }) => {
+    const [hasError, setHasError] = useState(false);
+
+    return (
+        <>
+            {!hasError && (
+                <img
+                    src={src}
+                    alt={alt}
+                    onError={() => setHasError(true)}
+                />
+            )}
+
+            {hasError && (
+                <span
+                    className={
+                        thumbnail
+                            ? "testimonial-thumb-initial"
+                            : "testimonial-initial"
+                    }
+                >
+                    {initial}
+                </span>
+            )}
+        </>
+    );
+};
+
 const TestimonialSection = () => {
     const [activeIndex, setActiveIndex] = useState(0);
+    const activeReview = testimonials[activeIndex];
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setActiveIndex((current) =>
-                (current + 1) % testimonials.length
+            setActiveIndex(
+                (current) => (current + 1) % testimonials.length
             );
         }, 3000);
-    
+
         return () => clearInterval(interval);
     }, []);
 
-    const activeReview = testimonials[activeIndex];
-
     const showPrevious = () => {
-        setActiveIndex((current) =>
-            (current - 1 + testimonials.length) % testimonials.length
+        setActiveIndex(
+            (current) =>
+                (current - 1 + testimonials.length) % testimonials.length
         );
     };
 
     const showNext = () => {
-        setActiveIndex((current) =>
-            (current + 1) % testimonials.length
+        setActiveIndex(
+            (current) => (current + 1) % testimonials.length
         );
     };
 
     return (
         <section className="testimonial-section">
             <div className="container">
-
                 <div className="testimonial-heading">
                     <span className="testimonial-eyebrow">
                         REAL STORIES, REAL BEAUTY
@@ -94,15 +120,13 @@ const TestimonialSection = () => {
                     </h2>
 
                     <p>
-                        Every visit means something special.
-                        Here’s what our clients have to say.
+                        Every visit means something special. Here’s what our
+                        clients have to say.
                     </p>
                 </div>
 
                 <div className="testimonial-carousel">
-
                     <div className="testimonial-feature">
-
                         <div className="testimonial-feature-top">
                             <span className="testimonial-quote-mark">
                                 “
@@ -114,10 +138,14 @@ const TestimonialSection = () => {
                             </span>
                         </div>
 
-                        <div className="testimonial-rating">
+                        <div
+                            className="testimonial-rating"
+                            aria-label="5 out of 5 stars"
+                        >
                             {Array.from({ length: 5 }, (_, index) => (
                                 <HiStar key={index} />
                             ))}
+
                             <span>5.0</span>
                         </div>
 
@@ -131,21 +159,17 @@ const TestimonialSection = () => {
                         <div className="testimonial-feature-bottom">
                             <div className="testimonial-reviewer">
                                 <div className="testimonial-reviewer-photo">
-                                    <img
+                                    <ReviewImage
+                                        key={activeReview.image}
                                         src={activeReview.image}
                                         alt={`${activeReview.name} Google profile`}
-                                        onError={(event) => {
-                                            event.currentTarget.style.display = "none";
-                                            event.currentTarget.nextElementSibling.style.display = "flex";
-                                        }}
+                                        initial={activeReview.name
+                                            .charAt(0)
+                                            .toUpperCase()}
                                     />
-
-                                    <span className="testimonial-initial">
-                                        {activeReview.name.charAt(0).toUpperCase()}
-                                    </span>
                                 </div>
 
-                                <div>
+                                <div className="testimonial-reviewer-details">
                                     <h3>{activeReview.name}</h3>
                                     <p>{activeReview.date}</p>
                                 </div>
@@ -160,12 +184,15 @@ const TestimonialSection = () => {
                                     <HiArrowLeft />
                                 </button>
 
-                                <span>
+                                <span aria-live="polite">
                                     {String(activeIndex + 1).padStart(2, "0")}
                                     <span className="testimonial-count-divider">
                                         /
                                     </span>
-                                    {String(testimonials.length).padStart(2, "0")}
+                                    {String(testimonials.length).padStart(
+                                        2,
+                                        "0"
+                                    )}
                                 </span>
 
                                 <button
@@ -178,49 +205,39 @@ const TestimonialSection = () => {
                             </div>
                         </div>
                     </div>
-                    </div>
-
                 </div>
 
                 <div className="testimonial-picker">
-                    <div className="testimonial-picker-label">
-                        <span>MORE KIND WORDS</span>
-                        <span>Select a reviewer</span>
-                    </div>
-
                     <div className="testimonial-thumbnails">
                         {testimonials.map((review, index) => (
                             <button
                                 type="button"
                                 key={review.name}
                                 className={`testimonial-thumb ${
-                                    activeIndex === index
-                                        ? "active"
-                                        : ""
+                                    activeIndex === index ? "active" : ""
                                 }`}
                                 onClick={() => setActiveIndex(index)}
                                 aria-label={`Read review by ${review.name}`}
                                 aria-pressed={activeIndex === index}
                             >
-                                <img
+                                <ReviewImage
+                                    key={review.image}
                                     src={review.image}
                                     alt=""
-                                    onError={(event) => {
-                                        event.currentTarget.style.display = "none";
-                                        event.currentTarget.nextElementSibling.style.display = "flex";
-                                    }}
+                                    initial={review.name
+                                        .charAt(0)
+                                        .toUpperCase()}
+                                    thumbnail
                                 />
-
-                                <span className="testimonial-thumb-initial">
-                                    {review.name.charAt(0).toUpperCase()}
-                                </span>
                             </button>
                         ))}
                     </div>
                 </div>
 
                 <div className="testimonial-footer">
-                    <p>Have you visited us? We’d love to hear from you.</p>
+                    <p>
+                        Have you visited us? We’d love to hear from you.
+                    </p>
 
                     <a
                         href={GOOGLE_REVIEWS_URL}
@@ -233,6 +250,7 @@ const TestimonialSection = () => {
                         <HiArrowUpRight />
                     </a>
                 </div>
+            </div>
         </section>
     );
 };

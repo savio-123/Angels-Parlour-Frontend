@@ -192,6 +192,7 @@ const Navbar = () => {
                         <br />
 
                         MON - SAT : 9:30 am - 7:00 pm
+                        <br />
                         SUNDAY    : 11:00 am - 6:30 pm
 
                         <br />
