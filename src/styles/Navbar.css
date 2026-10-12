@@ -429,7 +429,7 @@
 
     justify-content: flex-start;
 
-    gap: 70px;
+    gap: 250px;
 
     transition: 0.4s ease;
 }
@@ -473,6 +473,8 @@
     flex-direction: column;
 
     gap: 30px;
+
+    margin-top: 60px;
 }
 
 
