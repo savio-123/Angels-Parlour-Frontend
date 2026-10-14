@@ -117,7 +117,7 @@ const Home = () => {
 
                 </p>
 
-                <div className="hero-contact-info reveal-subtitle">
+                <div className="hero-contact-info reveal-contact">
 
                     <a href="tel:+919946935725">
                         <FaPhoneAlt />
