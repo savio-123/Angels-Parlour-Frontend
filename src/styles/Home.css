@@ -49,6 +49,28 @@
     color: white;
 }
 
+.hero-contact-info {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.hero-contact-info a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.hero-contact-info a:hover {
+    color: #f3d9dc;
+}
 
 /* =========================================
    HERO TYPOGRAPHY
@@ -502,7 +524,6 @@
     }
 }
 
-
 /* =========================================
    TABLET
 ========================================= */
@@ -510,106 +531,133 @@
 @media (max-width: 1024px) {
 
     .hero-section {
-
         min-height: 90vh;
-
-        padding:
-            140px 0 90px;
+        padding: 140px 0 90px;
     }
-
 
     .hero-content {
-
-        padding:
-            0 28px;
+        padding: 0 28px;
     }
 
-
     .hero-title {
-
-        font-size: clamp(
-            3.8rem,
-            8vw,
-            5.5rem
-        );
-
+        font-size: clamp(3.8rem, 8vw, 5.5rem);
         line-height: 0.95;
     }
 
-
     .hero-subtitle {
-
         font-size: 1rem;
-
         letter-spacing: 2px;
-
         margin-top: 18px;
     }
 
-
     .hero-button {
-
         margin-top: 24px;
-
-        padding:
-            14px 34px !important;
+        padding: 14px 34px !important;
     }
-
 
     /* SERVICES */
 
     .services-section {
-
         padding: 70px 0;
     }
 
-
     .services-main-title {
-
-        font-size: clamp(
-            2.5rem,
-            5vw,
-            4rem
-        );
-
+        font-size: clamp(2.5rem, 5vw, 4rem);
         line-height: 1.1;
-
-        padding:
-            0 20px;
-
+        padding: 0 20px;
         margin-bottom: 28px;
     }
 
-
     .services-swiper {
-
         padding-bottom: 30px;
     }
 
     .service-overlay {
-
         padding: 20px;
     }
 
-
     .service-btn {
-
         font-size: 0.82rem;
-
-        padding:
-            12px 26px;
+        padding: 12px 26px;
     }
 }
 
-/* iPad Pro / larger tablets */
+
+/* =========================================
+   IPAD PRO / LARGER TABLETS
+========================================= */
+
 @media (min-width: 1025px) and (max-width: 1366px) {
+
+    /* HERO */
+
+    .hero-section {
+        min-height: 65vh;
+        padding: 110px 0 30px;
+        margin-top: -90px;
+    }
+
+    .hero-content {
+        padding: 0 30px;
+    }
+
+    /* SERVICES */
 
     .service-slide {
         height: auto;
         aspect-ratio: 7 / 4;
     }
-
 }
+
+
+/* =========================================
+   IPAD MINI
+========================================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* HERO SPACING */
+
+    .hero-section {
+        min-height: 70vh;
+        padding: 110px 0 20px;
+        margin-top: -90px;
+    }
+
+    .hero-content {
+        padding: 0 24px;
+    }
+
+    .hero-title {
+        font-size: clamp(3rem, 6vw, 4.5rem);
+    }
+
+    /* CONTACT INFO */
+
+    .hero-contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        padding: 0 12px;
+        margin-top: 14px;
+    }
+
+    .hero-contact-info a {
+        justify-content: center;
+        text-align: center;
+        font-size: 0.85rem;
+    }
+
+    /* BUTTON SPACING */
+
+    .hero-button {
+        margin-top: 18px;
+    }
+}
+
 
 /* =========================================
    MOBILE
@@ -618,147 +666,109 @@
 @media (max-width: 767px) {
 
     .hero-section {
-
-        min-height: 82vh;
-
-        padding:
-            120px 0 70px;
-
+        min-height: 70vh;
+        padding: 120px 0 0;
         margin-top: -90px;
     }
 
-
     .hero-content {
-
-        padding:
-            0 18px;
+        padding: 0 18px;
     }
 
-
     .hero-title {
-
         font-size: 3rem;
     }
 
-
     .hero-subtitle {
-
         font-size: 0.92rem;
-
         letter-spacing: 2px;
     }
 
-
     .hero-button {
-
         width: 100%;
-
         max-width: 280px;
-
         font-size: 0.95rem !important;
     }
 
+    /* CONTACT INFO */
+
+    .hero-contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        width: 100%;
+        padding: 0 12px;
+    }
+
+    .hero-contact-info a {
+        justify-content: center;
+        text-align: center;
+        font-size: 0.8rem;
+    }
 
     /* SERVICES */
 
     .services-section {
-
         padding: 55px 0;
     }
 
-
     .services-small-title {
-
         font-size: 11px;
-
         letter-spacing: 3px;
     }
 
-
     .services-main-title {
-
         font-size: 2.3rem;
-
         line-height: 1.1;
-
-        padding:
-            0 18px;
+        padding: 0 18px;
     }
 
-
     .service-slide {
-
         height: 260px;
-
         border-radius: 10px;
     }
 
-
     .service-overlay {
-
         padding: 16px;
     }
 
-
     .service-btn {
-
         width: fit-content;
-
         text-align: center;
-
-        padding:
-            11px 20px;
-
+        padding: 11px 20px;
         font-size: 0.78rem;
     }
 
-
     .gallery-section {
-
         padding: 55px 0;
     }
 
-
     .gallery-small-title {
-
         font-size: 11px;
-
         letter-spacing: 3px;
-
         margin-bottom: 12px;
     }
 
-
     .gallery-main-title {
-
         font-size: 2.3rem;
-
         line-height: 1.1;
-
         padding: 0 18px;
-
         margin-bottom: 22px;
     }
 
-
     .gallery-grid {
-
         column-count: 2;
-
         column-gap: 14px;
     }
 
-
     .gallery-item {
-
         margin-bottom: 14px;
-
         border-radius: 10px;
     }
 
-
     .gallery-image {
-
         border-radius: 10px;
     }
 }
@@ -771,27 +781,19 @@
 @media (max-width: 480px) {
 
     .hero-title {
-
         font-size: 2.3rem;
     }
 
-
     .services-main-title {
-
         font-size: 2rem;
     }
 
-
     .service-slide {
-
         height: 230px;
     }
 
     .service-btn {
-
         font-size: 0.75rem;
-
-        padding:
-            10px 18px;
+        padding: 10px 18px;
     }
 }

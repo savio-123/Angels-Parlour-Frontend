@@ -1,4 +1,8 @@
 import React from 'react'
+import {
+    FaPhoneAlt,
+    FaEnvelope,
+} from "react-icons/fa";
 import { services } from "../data/Services";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -112,6 +116,20 @@ const Home = () => {
                 PREMIUM BEAUTY & HAIR CARE
 
                 </p>
+
+                <div className="hero-contact-info reveal-subtitle">
+
+                    <a href="tel:+919946935725">
+                        <FaPhoneAlt />
+                        <span>+91 9946935725</span>
+                    </a>
+
+                    <a href="mailto:angelsbeautyparlourspa@gmail.com">
+                        <FaEnvelope />
+                        <span>angelsbeautyparlourspa@gmail.com</span>
+                    </a>
+
+                </div>
                     <Link
                         to="/book-appointment"
                         className="
@@ -126,7 +144,6 @@ const Home = () => {
                         BOOK APPOINTMENT
 
                     </Link>
-
                 </div>
 
             </div>

@@ -273,150 +273,6 @@ function Contact() {
 
             </section>
 
-            {/* FORM */}
-
-            <section
-                className="
-                    contact-form-section
-                "
-            >
-
-                <div
-                    className="container"
-                >
-
-                <div className="contact-form-card">
-
-                <h2>
-
-                    Send an Enquiry
-
-                </h2>
-
-                <form
-
-                    className="contact-form"
-
-                    onSubmit={handleSubmit}
-                >
-
-                    <div className="contact-form-grid">
-
-                    <input
-
-                        type="text"
-
-                        name="name"
-
-                        placeholder="Jane Doe"
-
-                        value={formData.name}
-
-                        onChange={handleChange}
-                        />
-
-                        <input
-
-                        type="email"
-
-                        name="email"
-
-                        placeholder="jane@example.com"
-
-                        value={formData.email}
-
-                        onChange={handleChange}
-                        />
-
-                        <input
-
-                        type="text"
-
-                        name="phone"
-
-                        placeholder="+91 9876543210"
-
-                        value={formData.phone}
-
-                        onChange={handleChange}
-                        />
-
-                        <input
-
-                        type="date"
-
-                        name="preferredDate"
-
-                        value={formData.preferredDate}
-
-                        onChange={handleChange}
-                        />
-                    </div>
-
-                    <select
-
-                        name="service"
-
-                        value={formData.service}
-
-                        onChange={handleChange}
-                        >
-
-                        <option value="">
-
-                            Select a service
-
-                        </option>
-
-                        {
-
-                            services.map(
-
-                                (service) => (
-
-                                    <option
-
-                                        key={service.id}
-
-                                        value={service.name}
-                                    >
-
-                                        {service.name}
-
-                                    </option>
-                                )
-                            )
-                        }
-
-                        </select>
-
-                    <textarea
-
-                        rows="6"
-
-                        name="message"
-
-                        placeholder="How can we help you?"
-
-                        value={formData.message}
-
-                        onChange={handleChange}
-                    />
-
-                    <button type="submit">
-
-                    SEND ENQUIRY
-
-                    </button>
-
-                </form>
-
-                </div>
-
-                </div>
-
-            </section>
-
             {/* INFO */}
 
             <section
@@ -560,6 +416,149 @@ function Contact() {
                 </div>
 
                 </section>
+                            {/* FORM */}
+
+            <section
+                className="
+                    contact-form-section
+                "
+            >
+
+                <div
+                    className="container"
+                >
+
+                <div className="contact-form-card">
+
+                <h2>
+
+                    Send an Enquiry
+
+                </h2>
+
+                <form
+
+                    className="contact-form"
+
+                    onSubmit={handleSubmit}
+                >
+
+                    <div className="contact-form-grid">
+
+                    <input
+
+                        type="text"
+
+                        name="name"
+
+                        placeholder="Jane Doe"
+
+                        value={formData.name}
+
+                        onChange={handleChange}
+                        />
+
+                        <input
+
+                        type="email"
+
+                        name="email"
+
+                        placeholder="jane@example.com"
+
+                        value={formData.email}
+
+                        onChange={handleChange}
+                        />
+
+                        <input
+
+                        type="text"
+
+                        name="phone"
+
+                        placeholder="+91 9876543210"
+
+                        value={formData.phone}
+
+                        onChange={handleChange}
+                        />
+
+                        <input
+
+                        type="date"
+
+                        name="preferredDate"
+
+                        value={formData.preferredDate}
+
+                        onChange={handleChange}
+                        />
+                    </div>
+
+                    <select
+
+                        name="service"
+
+                        value={formData.service}
+
+                        onChange={handleChange}
+                        >
+
+                        <option value="">
+
+                            Select a service
+
+                        </option>
+
+                        {
+
+                            services.map(
+
+                                (service) => (
+
+                                    <option
+
+                                        key={service.id}
+
+                                        value={service.name}
+                                    >
+
+                                        {service.name}
+
+                                    </option>
+                                )
+                            )
+                        }
+
+                        </select>
+
+                    <textarea
+
+                        rows="6"
+
+                        name="message"
+
+                        placeholder="How can we help you?"
+
+                        value={formData.message}
+
+                        onChange={handleChange}
+                    />
+
+                    <button type="submit">
+
+                    SEND ENQUIRY
+
+                    </button>
+
+                </form>
+
+                </div>
+
+                </div>
+
+            </section>
 
             {/* FAQ */}
 

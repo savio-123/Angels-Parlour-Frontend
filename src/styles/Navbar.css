@@ -536,26 +536,33 @@
 
     .nav-center-links,
     .navbar-buttons {
-
         display: none;
     }
 
-    .mobile-menu-btn {
-
-        display: block;
+    .custom-nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
     }
 
-    .brand-text {
-
-        font-size: 0.85rem;
-
-        letter-spacing: 2px;
+    .brand-logo {
+        margin-right: auto;
     }
 
     .brand-image {
-
         width: 65px;
-
         height: 65px;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        flex-shrink: 0;
+        margin-left: auto;
+    }
+
+    .brand-text {
+        font-size: 0.85rem;
+        letter-spacing: 2px;
     }
 }
